@@ -3,6 +3,9 @@ import { userValidator } from '../middleware/user';
 import { verifyToken } from '../middleware/auth';
 import { userController } from '../controllers/user';
 import { commentController } from '../controllers/comment';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const { registerUserValidator, loginUserValidator } = userValidator;
 
